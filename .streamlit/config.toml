@@ -2,7 +2,7 @@
 primaryColor = "#6250d6"
 
 [server]
-headless = false
+headless = true
 
 [browser]
 gatherUsageStats = false
