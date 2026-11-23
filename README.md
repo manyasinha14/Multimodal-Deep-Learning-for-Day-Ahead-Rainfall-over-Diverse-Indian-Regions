@@ -1,4 +1,4 @@
-# Rainfall Forecast Portal (v3 — operational)
+# Rainfall Forecast Portal
 
 A standalone, multi-page web app that forecasts, every day of the year, **whether it will rain (≥ 2.5 mm)** and
 **how much** in four Indian regions (Chennai, Delhi–Lucknow, Kerala Western Ghats, Rajasthan) for the next IMD
