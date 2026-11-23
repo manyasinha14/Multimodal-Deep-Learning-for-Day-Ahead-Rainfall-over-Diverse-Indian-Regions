@@ -1,0 +1,174 @@
+{
+ "version": 3,
+ "regions": {
+  "coastal_chennai": {
+   "bbox": [
+    79.6,
+    12.6,
+    80.5,
+    13.4
+   ],
+   "type": "coastal"
+  },
+  "plains_delhi_lko": {
+   "bbox": [
+    77.0,
+    26.5,
+    81.0,
+    28.8
+   ],
+   "type": "plains"
+  },
+  "ghats_kerala": {
+   "bbox": [
+    76.3,
+    9.5,
+    77.3,
+    11.5
+   ],
+   "type": "orographic"
+  },
+  "arid_rajasthan": {
+   "bbox": [
+    70.5,
+    25.0,
+    74.5,
+    27.5
+   ],
+   "type": "semi_arid"
+  }
+ },
+ "region_names": [
+  "coastal_chennai",
+  "plains_delhi_lko",
+  "ghats_kerala",
+  "arid_rajasthan"
+ ],
+ "nwp_feats": [
+  "nwp_precip_log",
+  "nwp_pmax_log",
+  "nwp_wet_frac",
+  "nwp_cloud",
+  "nwp_rh",
+  "nwp_t",
+  "nwp_p",
+  "nwp_u",
+  "nwp_v"
+ ],
+ "dims": {
+  "nwp": 9,
+  "imd": 1,
+  "gpm": 1,
+  "sat": 2
+ },
+ "full": {
+  "modalities": [
+   "nwp",
+   "imd",
+   "gpm",
+   "sat",
+   "img"
+  ],
+  "fusion": "gated",
+  "use_region": true
+ },
+ "scaler": {
+  "nwp": {
+   "mean": [
+    0.5793232321739197,
+    0.22404079139232635,
+    0.15071681141853333,
+    54.518226623535156,
+    65.54032897949219,
+    26.328916549682617,
+    979.0084838867188,
+    0.8822561502456665,
+    2.2895774841308594
+   ],
+   "std": [
+    0.9013139009475708,
+    0.37941721081733704,
+    0.2713793218135834,
+    32.827964782714844,
+    17.921831130981445,
+    5.094529151916504,
+    21.08641242980957,
+    5.389886379241943,
+    3.343099355697632
+   ]
+  },
+  "imd": {
+   "mean": [
+    0.6151347756385803
+   ],
+   "std": [
+    0.9773680567741394
+   ]
+  },
+  "gpm": {
+   "mean": [
+    0.7095897793769836
+   ],
+   "std": [
+    1.0534058809280396
+   ]
+  },
+  "sat": {
+   "mean": [
+    0.6863187551498413,
+    18.811676025390625
+   ],
+   "std": [
+    0.9635546803474426,
+    4.869210720062256
+   ]
+  }
+ },
+ "y_std": 8.223561734233028,
+ "threshold": 0.8,
+ "rain_mm": 2.5,
+ "window": 5,
+ "lag": {
+  "imd": 3,
+  "gpm": 3,
+  "power_precip": 5,
+  "power_sc": 9,
+  "img": 3
+ },
+ "img_size": 32,
+ "grid_n": 3,
+ "train_end": "2025-05-31",
+ "val_end": "2025-12-31",
+ "test_start": "2026-01-01",
+ "data_start": "2024-01-01",
+ "latest": "2026-10-31",
+ "epochs_final": 13,
+ "n_models": 5,
+ "trained_on": "2026-11-01",
+ "imd_realtime_from": "2026-01-01",
+ "full_no_gpm": {
+  "modalities": [
+   "nwp",
+   "imd",
+   "sat",
+   "img"
+  ],
+  "fusion": "gated",
+  "use_region": true
+ },
+ "threshold_no_gpm": 0.775,
+ "imerg_concept": "C2723754850-GES_DISC",
+ "power_groups": {
+  "power_precip": [
+   "power_precip_log"
+  ],
+  "power_sc": [
+   "ALLSKY_SFC_SW_DWN"
+  ]
+ },
+ "power_delay_days": {
+  "PRECTOTCORR": 3,
+  "ALLSKY_SFC_SW_DWN": 5,
+  "CLOUD_AMT": 63
+ }
+}
