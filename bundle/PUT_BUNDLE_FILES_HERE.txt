@@ -1,2 +1,0 @@
-Unzip rainfall_portal_bundle_v3.zip (downloaded at the end of the v3 Colab notebook) into this folder.
-You should then have: config.json, model.pt, predictions.csv, daily.csv, modis_images.npz and the results CSV files.
